@@ -1,8 +1,8 @@
 use universityclass;
 
-drop table classroomschedule;
-drop table classroom;
-drop table universityclass;
+drop table if exists classroomschedule;
+drop table if exists classroom;
+drop table if exists universityclass;
 create table universityclass(
 cid int auto_increment,
 cname varchar(50) not null,
@@ -19,7 +19,7 @@ insert into universityclass(cname,major) values('Digital Signal Processing', 'EE
 insert into universityclass(cname,major) values('Linear Algebra', 'Math');
 
 
-drop table student;
+drop table if exists student;
 create table student(
 sname varchar(20) not null,
 stid int auto_increment,
@@ -56,7 +56,7 @@ CONSTRAINT scheduleid_fk FOREIGN KEY(scheduleid) REFERENCES classroom(cid)
 );
 insert into classroomschedule(scheduleid,startdate,enddate,starttime,endtime) values(1001,'2016-09-01','2016-12-21','10:00:00','12:00:00');
 
-drop table administrator;
+drop table if exists administrator;
 create table administrator(
 stid varchar(20) not null,
 spassword varchar(20) default 'password'
