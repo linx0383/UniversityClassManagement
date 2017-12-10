@@ -15,6 +15,7 @@ import models.UniversityClassManagement;
 
 import java.sql.Connection;
 import java.sql.Statement;
+// Developed by Tianshu Lin
 //Main Menu 1. Add Class 2. List Classes (Prints class with student
 //		 * info) 3. Add Student (Add Students to array) 4. Find a Class (Prompts
 //		 * for major and returns all matching classes, ) 5. Enroll Student to
